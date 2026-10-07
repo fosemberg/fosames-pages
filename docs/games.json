@@ -36,6 +36,18 @@
     "thumb": null
   },
   {
+    "slug": "lumen-horde",
+    "title": "Lumen Horde",
+    "description": "You are the only light in the dark. Survive 10 minutes against the shadow horde, pick one upgrade of three, turn your light into weapons.",
+    "descriptionRu": "Ты — единственный свет во тьме. Выживи 10 минут против теневой орды, выбирай одно улучшение из трёх и превращай свет в оружие.",
+    "genre": "Survivor-like roguelite",
+    "emoji": "🕯️",
+    "accent": "#ffb84d",
+    "order": 4,
+    "url": "./lumen-horde/",
+    "thumb": null
+  },
+  {
     "slug": "hyperlane",
     "title": "Hyperlane",
     "description": "A neon three-lane runner: swipe to dodge, jump and slide while the world hyperjumps between city, conduit and orbit.",

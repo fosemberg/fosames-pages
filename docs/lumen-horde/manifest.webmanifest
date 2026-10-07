@@ -1,0 +1,13 @@
+{
+  "name": "Lumen Horde",
+  "short_name": "Lumen",
+  "description": "You are the only light in the dark. Survive 10 minutes against the shadow horde.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#05060d",
+  "theme_color": "#05060d",
+  "categories": ["games"],
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
