@@ -1,0 +1,24 @@
+{
+  "name": "Unbolt",
+  "short_name": "Unbolt",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#0A0E14",
+  "theme_color": "#0A0E14",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "description": "A 3D teardown puzzle: unscrew every bolt of a machine into its matching crate, keep the rail clear and shelve the finished exhibit.",
+  "categories": [
+    "games",
+    "puzzle"
+  ],
+  "lang": "en"
+}

@@ -132,6 +132,18 @@
     "thumb": null
   },
   {
+    "slug": "unbolt",
+    "title": "Unbolt",
+    "description": "Strip a 3D machine bolt by bolt: spin the cradle, sort every screw into its crate, keep the rail clear and shelve the exhibit.",
+    "descriptionRu": "Разбери 3D-механизм до последнего винта: крути подвес, раскладывай винты по крейтам, не забей рейку — и ставь экспонат на полку.",
+    "genre": "3D puzzle",
+    "emoji": "🔩",
+    "accent": "#2FE3C8",
+    "order": 12,
+    "url": "./unbolt/",
+    "thumb": "./unbolt/thumb.jpg"
+  },
+  {
     "slug": "glyph-daily",
     "title": "Glyph",
     "description": "One hidden five-letter word a day, six tries, glowing glass runes — in English and Russian.",
