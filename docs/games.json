@@ -117,7 +117,7 @@
     "accent": "#ff7a3c",
     "order": 10,
     "url": "./singularity/",
-    "thumb": null
+    "thumb": "./singularity/thumb.jpg"
   },
   {
     "slug": "neon-coil",
