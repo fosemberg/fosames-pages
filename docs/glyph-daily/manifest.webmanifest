@@ -1,0 +1,14 @@
+{
+  "name": "Glyph",
+  "short_name": "Glyph",
+  "description": "Guess the hidden five-letter word in six tries. One puzzle a day, English and Russian.",
+  "lang": "en",
+  "categories": ["games", "puzzle", "word"],
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#080a16",
+  "theme_color": "#080a16",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

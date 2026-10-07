@@ -46,5 +46,17 @@
     "order": 8,
     "url": "./mosaic-breaker/",
     "thumb": null
+  },
+  {
+    "slug": "glyph-daily",
+    "title": "Glyph",
+    "description": "One hidden five-letter word a day, six tries, glowing glass runes — in English and Russian.",
+    "descriptionRu": "Одно скрытое слово из пяти букв в день, шесть попыток, светящиеся стеклянные руны — RU и EN.",
+    "genre": "Daily word puzzle",
+    "emoji": "🔆",
+    "accent": "#ffc663",
+    "order": 13,
+    "url": "./glyph-daily/",
+    "thumb": null
   }
 ]
