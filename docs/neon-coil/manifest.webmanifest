@@ -1,0 +1,14 @@
+{
+  "name": "Neon Coil",
+  "short_name": "Neon Coil",
+  "description": "Live-wire snake arena: swallow motes, ring your rivals, paint the lattice.",
+  "lang": "en",
+  "categories": ["games"],
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#04060e",
+  "theme_color": "#04060e",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

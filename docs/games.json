@@ -72,6 +72,18 @@
     "thumb": "./aurora-tower/thumb.jpg"
   },
   {
+    "slug": "neon-coil",
+    "title": "Neon Coil",
+    "description": "Live-wire snake arena: swallow motes, ring your rivals to burst them and paint the lattice in your light — 3 minutes, 40 rivals, two modes.",
+    "descriptionRu": "Арена неоновых змеев: глотай искры, замыкай петлю вокруг соперников и закрашивай решётку своим светом — 3 минуты, 40 соперников, два режима.",
+    "genre": "io arena · snake · territory",
+    "emoji": "🐍",
+    "accent": "#19f0ff",
+    "order": 11,
+    "url": "./neon-coil/",
+    "thumb": null
+  },
+  {
     "slug": "glyph-daily",
     "title": "Glyph",
     "description": "One hidden five-letter word a day, six tries, glowing glass runes — in English and Russian.",
