@@ -57,7 +57,7 @@
     "accent": "#3fd6a3",
     "order": 5,
     "url": "./jade-trio/",
-    "thumb": null
+    "thumb": "./jade-trio/thumb.jpg"
   },
   {
     "slug": "hyperlane",
