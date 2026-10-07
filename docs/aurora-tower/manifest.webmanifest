@@ -1,0 +1,12 @@
+{
+  "name": "Aurora Tower",
+  "short_name": "Aurora Tower",
+  "description": "One-tap glass stacker: drop sliding panes, land them flush, ride the beat and build a spire into the aurora.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#070b18",
+  "theme_color": "#070b18",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

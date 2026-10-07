@@ -48,6 +48,18 @@
     "thumb": null
   },
   {
+    "slug": "aurora-tower",
+    "title": "Aurora Tower",
+    "description": "One-tap glass stacker: drop sliding panes, land them flush, ride the beat and build a spire into the aurora.",
+    "descriptionRu": "Стекер в одно касание: роняй скользящие панели, укладывай их впритык, попадай в бит и выращивай шпиль до полярного сияния.",
+    "genre": "arcade",
+    "emoji": "🏙️",
+    "accent": "#3ef0b0",
+    "order": 9,
+    "url": "./aurora-tower/",
+    "thumb": "./aurora-tower/thumb.jpg"
+  },
+  {
     "slug": "glyph-daily",
     "title": "Glyph",
     "description": "One hidden five-letter word a day, six tries, glowing glass runes — in English and Russian.",
