@@ -1,0 +1,13 @@
+{
+  "name": "Rune Bastion",
+  "short_name": "Rune Bastion",
+  "description": "Merge rune towers and hold the leyline against the crystal horde.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#060814",
+  "theme_color": "#060814",
+  "categories": ["games", "strategy"],
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

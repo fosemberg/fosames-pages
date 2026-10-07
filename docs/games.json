@@ -156,6 +156,18 @@
     "thumb": null
   },
   {
+    "slug": "rune-bastion",
+    "title": "Rune Bastion",
+    "description": "Summon rune towers, merge them into greater sigils and hold the leyline against the crystal horde.",
+    "descriptionRu": "Призывай рунные башни, сливай их в старшие сигилы и держи лейлинию против кристальной орды.",
+    "genre": "strategy",
+    "emoji": "🛡️",
+    "accent": "#5ee6c4",
+    "order": 14,
+    "url": "./rune-bastion/",
+    "thumb": null
+  },
+  {
     "slug": "sinkhole",
     "title": "Sinkhole Rush",
     "description": "Steer a hungry sinkhole through a sun-baked boomtown: swallow benches, cars and tower blocks, trigger Cascade Blooms and outgrow five rival pits before the clock dies.",
