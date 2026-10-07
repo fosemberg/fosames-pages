@@ -1,0 +1,13 @@
+{
+  "name": "Prism Grid",
+  "short_name": "Prism Grid",
+  "description": "Drop glowing prisms on an 8x8 grid, clear rows and columns, chain combos.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#070b18",
+  "theme_color": "#070b18",
+  "categories": ["games", "puzzle"],
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

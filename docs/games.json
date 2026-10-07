@@ -1,5 +1,17 @@
 [
   {
+    "slug": "prism-grid",
+    "title": "Prism Grid",
+    "description": "Drop glowing prisms on an 8x8 grid, clear rows and columns, chain combos. Classic, Daily seed and a 30-level Journey.",
+    "descriptionRu": "Ставь светящиеся призмы на поле 8x8, зачищай ряды и столбцы, собирай комбо. Классика, ежедневный сид и «Путешествие» из 30 уровней.",
+    "genre": "Block puzzle",
+    "emoji": "💠",
+    "accent": "#4ee7ff",
+    "order": 1,
+    "url": "./prism-grid/",
+    "thumb": null
+  },
+  {
     "slug": "elixir-lab",
     "title": "Elixir Lab",
     "description": "Pour glowing elixirs between glass flasks until every potion is pure. Hidden layers, frozen vials, a daily brew.",
