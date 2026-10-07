@@ -21,7 +21,7 @@
     "accent": "#39e8b6",
     "order": 2,
     "url": "./elixir-lab/",
-    "thumb": null
+    "thumb": "./elixir-lab/thumb.jpg"
   },
   {
     "slug": "nova-merge",
