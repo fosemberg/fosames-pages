@@ -48,6 +48,18 @@
     "thumb": null
   },
   {
+    "slug": "jade-trio",
+    "title": "Jade Trio",
+    "description": "Jade and porcelain tile puzzle: match free tiles in threes on a 7-slot alcove, or clear classic layouts in pairs.",
+    "descriptionRu": "Пазл из нефритовых и фарфоровых плиток: собирай открытые плитки тройками в нишу на 7 ячеек или разбирай классические раскладки парами.",
+    "genre": "tile puzzle",
+    "emoji": "🀄",
+    "accent": "#3fd6a3",
+    "order": 5,
+    "url": "./jade-trio/",
+    "thumb": null
+  },
+  {
     "slug": "hyperlane",
     "title": "Hyperlane",
     "description": "A neon three-lane runner: swipe to dodge, jump and slide while the world hyperjumps between city, conduit and orbit.",

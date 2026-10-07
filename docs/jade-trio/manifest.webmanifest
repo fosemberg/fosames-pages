@@ -1,0 +1,14 @@
+{
+  "name": "Jade Trio",
+  "short_name": "Jade Trio",
+  "description": "Jade and porcelain tile puzzle: clear free tiles in threes, or take classic layouts apart in pairs.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#0a1418",
+  "theme_color": "#0a1418",
+  "categories": ["games", "puzzle"],
+  "lang": "en",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
