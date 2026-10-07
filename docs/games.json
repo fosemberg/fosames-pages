@@ -130,5 +130,17 @@
     "order": 13,
     "url": "./glyph-daily/",
     "thumb": null
+  },
+  {
+    "slug": "sinkhole",
+    "title": "Sinkhole Rush",
+    "description": "Steer a hungry sinkhole through a sun-baked boomtown: swallow benches, cars and tower blocks, trigger Cascade Blooms and outgrow five rival pits before the clock dies.",
+    "descriptionRu": "Веди голодный провал по глинобитному городку: глотай скамейки, машины и высотки, запускай «Каскад» и обгони пять соперников до конца раунда.",
+    "genre": "arcade",
+    "emoji": "🕳️",
+    "accent": "#ff8a3d",
+    "order": 15,
+    "url": "./sinkhole/",
+    "thumb": null
   }
 ]

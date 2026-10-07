@@ -1,0 +1,12 @@
+{
+  "name": "Sinkhole Rush",
+  "short_name": "Sinkhole",
+  "description": "Swallow a whole district with a growing sinkhole and outgrow five rival pits.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#1a1026",
+  "theme_color": "#1a1026",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
