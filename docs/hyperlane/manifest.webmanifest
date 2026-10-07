@@ -1,0 +1,14 @@
+{
+  "name": "Hyperlane",
+  "short_name": "Hyperlane",
+  "description": "A neon three-lane runner: swipe to dodge, jump and slide while the world hyperjumps between city, conduit and orbit.",
+  "lang": "en",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#0a0618",
+  "theme_color": "#0a0618",
+  "categories": ["games"],
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

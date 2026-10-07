@@ -36,6 +36,18 @@
     "thumb": null
   },
   {
+    "slug": "hyperlane",
+    "title": "Hyperlane",
+    "description": "A neon three-lane runner: swipe to dodge, jump and slide while the world hyperjumps between city, conduit and orbit.",
+    "descriptionRu": "Неоновый раннер на три полосы: свайпы, прыжки и подкаты, а мир гиперпрыжком меняется между городом, тоннелем и орбитой.",
+    "genre": "3D endless runner",
+    "emoji": "🛣️",
+    "accent": "#ff2d95",
+    "order": 6,
+    "url": "./hyperlane/",
+    "thumb": null
+  },
+  {
     "slug": "mosaic-breaker",
     "title": "Mosaic Breaker",
     "description": "Send colour-matched tapers around the rail to chip a glass mosaic apart — and uncover the painting hidden beneath it.",
