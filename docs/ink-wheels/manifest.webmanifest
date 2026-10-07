@@ -1,0 +1,14 @@
+{
+  "name": "Ink Wheels",
+  "short_name": "Ink Wheels",
+  "description": "Draw the wheels, then drive them: hold to roll across 24 neon-ink stunt tracks.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#0a1020",
+  "theme_color": "#0a1020",
+  "lang": "en",
+  "categories": ["games"],
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

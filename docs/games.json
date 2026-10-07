@@ -60,6 +60,18 @@
     "thumb": null
   },
   {
+    "slug": "ink-wheels",
+    "title": "Ink Wheels",
+    "description": "Draw the wheels, then drive them: hold to roll across 24 neon-ink stunt tracks.",
+    "descriptionRu": "Нарисуй колёса и прокатись на них: 24 трюковые трассы светящимися чернилами.",
+    "genre": "physics driving puzzle",
+    "emoji": "🛞",
+    "accent": "#35f0ff",
+    "order": 7,
+    "url": "./ink-wheels/",
+    "thumb": null
+  },
+  {
     "slug": "mosaic-breaker",
     "title": "Mosaic Breaker",
     "description": "Send colour-matched tapers around the rail to chip a glass mosaic apart — and uncover the painting hidden beneath it.",
