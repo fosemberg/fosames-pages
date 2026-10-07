@@ -96,6 +96,18 @@
     "thumb": "./aurora-tower/thumb.jpg"
   },
   {
+    "slug": "singularity",
+    "title": "Hungry Singularity",
+    "description": "Feed a growing black hole: fling matter past the event horizon, hire cosmic attractors, time the Tidal Surge for x5, then collapse everything into a new universe.",
+    "descriptionRu": "Кормите растущую чёрную дыру: швыряйте материю за горизонт событий, нанимайте космические аттракторы, ловите «Приливный всплеск» на x5 и схлопывайте всё в новую вселенную.",
+    "genre": "idle",
+    "emoji": "🕳️",
+    "accent": "#ff7a3c",
+    "order": 10,
+    "url": "./singularity/",
+    "thumb": null
+  },
+  {
     "slug": "neon-coil",
     "title": "Neon Coil",
     "description": "Live-wire snake arena: swallow motes, ring your rivals to burst them and paint the lattice in your light — 3 minutes, 40 rivals, two modes.",

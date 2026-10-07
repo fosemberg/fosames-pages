@@ -1,0 +1,14 @@
+{
+  "name": "Hungry Singularity",
+  "short_name": "Singularity",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#050309",
+  "theme_color": "#050309",
+  "description": "Feed a growing black hole, hire cosmic attractors, time the Tidal Surge for x5 and collapse everything into a new universe.",
+  "categories": ["games"],
+  "lang": "en",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
