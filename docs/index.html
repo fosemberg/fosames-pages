@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07051a">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="fosames — free mobile web games. Мобильные веб-игры.">
+<title>fosames — mobile web games</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0820'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle'%3E%F0%9F%8E%AE%3C/text%3E%3C/svg%3E">
+<script>
+  (function () {
+    var q = new URLSearchParams(location.search).get('lang')
+    var l = q || (navigator.languages && navigator.languages[0]) || navigator.language || 'en'
+    document.documentElement.lang = /^(ru|be|uk|kk|ky|uz|tg|hy|az)/i.test(l) ? 'ru' : 'en'
+  })()
+</script>
+<style>
+  :root { --bg: #07051a; --fg: #f3f0ff; --muted: #a59fca; color-scheme: dark; }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; min-height: 100dvh; background: var(--bg); color: var(--fg);
+    font-family: ui-rounded, 'SF Pro Rounded', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; overflow-x: hidden;
+  }
+  html[lang=ru] .en, html:not([lang=ru]) .ru { display: none !important; }
+
+  /* animated aurora: a few blurred blobs moved with transforms only (GPU-composited, cheap on phones) */
+  .sky { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none;
+         background: radial-gradient(120% 80% at 50% 0%, #1a1150 0%, var(--bg) 60%); }
+  .sky i { position: absolute; width: 70vmax; height: 70vmax; border-radius: 50%; filter: blur(70px); opacity: .45;
+           will-change: transform; animation: drift 22s ease-in-out infinite alternate; }
+  .sky i:nth-child(1) { background: #7c5cff; left: -25vmax; top: -30vmax; }
+  .sky i:nth-child(2) { background: #22d3ee; right: -30vmax; top: 10vh; animation-duration: 28s; animation-delay: -6s; opacity: .28; }
+  .sky i:nth-child(3) { background: #ff4fa3; left: 10vw; bottom: -45vmax; animation-duration: 34s; animation-delay: -12s; opacity: .25; }
+  @keyframes drift {
+    0% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(12vw, 8vh, 0) scale(1.15); }
+    100% { transform: translate3d(-8vw, 14vh, 0) scale(.9); }
+  }
+
+  .wrap { max-width: 1180px; margin: 0 auto;
+          padding: calc(env(safe-area-inset-top, 0px) + 40px) max(16px, env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 32px) max(16px, env(safe-area-inset-left, 0px)); }
+  header { text-align: center; margin-bottom: 28px; }
+  h1 { margin: 0; font-size: clamp(44px, 12vw, 88px); font-weight: 900; letter-spacing: -.04em; line-height: .95;
+       background: linear-gradient(110deg, #fff 0%, #c9bbff 35%, #22d3ee 60%, #ff7ac6 85%, #fff 100%);
+       background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent;
+       animation: sheen 9s linear infinite; filter: drop-shadow(0 6px 40px rgb(124 92 255 / .45)); }
+  @keyframes sheen { to { background-position: -250% 0; } }
+  .tag { margin: 12px 0 0; color: var(--muted); font-size: clamp(15px, 4vw, 18px); }
+  .count { display: inline-block; margin-top: 14px; padding: 5px 12px; border-radius: 999px; font-size: 13px; font-weight: 700;
+           background: rgb(255 255 255 / .07); border: 1px solid rgb(255 255 255 / .1); }
+
+  .grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px;
+          grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); }
+  .card { animation: rise .6s cubic-bezier(.2, 1, .3, 1) both; animation-delay: calc(var(--i) * 60ms); }
+  @keyframes rise { from { opacity: 0; transform: translateY(18px); } }
+  .card a { display: flex; flex-direction: column; height: 100%; text-decoration: none; color: inherit; border-radius: 22px; overflow: hidden;
+            background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 22%, transparent), rgb(255 255 255 / .03) 55%), var(--card-bg);
+            border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+            box-shadow: 0 10px 40px -12px color-mix(in srgb, var(--accent) 55%, transparent);
+            transition: transform .25s cubic-bezier(.2, 1, .3, 1), box-shadow .25s; }
+  .card a:hover, .card a:focus-visible { transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 18px 60px -12px color-mix(in srgb, var(--accent) 80%, transparent); outline: none; }
+  .card a:active { transform: scale(.98); }
+  .media { position: relative; aspect-ratio: 4 / 3; }
+  .frame { position: absolute; inset: 0; overflow: hidden;
+           background: radial-gradient(circle at 50% 40%, color-mix(in srgb, var(--accent) 55%, transparent), transparent 70%), var(--card-bg); }
+  .media img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; display: block; transition: transform .5s; }
+  .card a:hover .media img { transform: scale(1.05); }
+  .ph { position: absolute; inset: 0; display: grid; place-items: center; font-size: 72px; filter: drop-shadow(0 8px 30px var(--accent)); }
+  .emoji { position: absolute; left: 12px; bottom: -18px; width: 46px; height: 46px; display: grid; place-items: center; font-size: 26px;
+           border-radius: 14px; background: var(--card-bg); border: 1px solid color-mix(in srgb, var(--accent) 50%, transparent);
+           box-shadow: 0 6px 20px rgb(0 0 0 / .4); }
+  .media:has(.ph) .emoji { display: none; }
+  .body { padding: 26px 16px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  h2 { margin: 0; font-size: 20px; font-weight: 800; letter-spacing: -.01em; }
+  .genre { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; padding: 4px 8px; border-radius: 999px;
+           color: color-mix(in srgb, var(--accent) 60%, white); background: color-mix(in srgb, var(--accent) 18%, transparent); white-space: nowrap; }
+  .body p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.45; flex: 1; }
+  .play { margin-top: 4px; align-self: flex-start; font-weight: 800; font-size: 14px; padding: 9px 16px; border-radius: 999px;
+          background: linear-gradient(100deg, var(--accent), color-mix(in srgb, var(--accent) 50%, #22d3ee)); color: #fff;
+          box-shadow: 0 6px 20px -6px var(--accent); }
+  .empty { text-align: center; color: var(--muted); padding: 60px 0; }
+  footer { margin-top: 36px; text-align: center; color: var(--muted); font-size: 13px; }
+  footer a { color: inherit; }
+  @media (max-width: 560px) {
+    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .media { aspect-ratio: 3 / 4; }
+    .emoji { width: 38px; height: 38px; font-size: 21px; left: 10px; bottom: -14px; border-radius: 12px; }
+    .body { padding: 22px 12px 12px; gap: 6px; }
+    h2 { font-size: 16px; }
+    .genre { display: none; }
+    .body p { font-size: 12.5px; }
+    .play { font-size: 13px; padding: 7px 13px; }
+  }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="sky" aria-hidden="true"><i></i><i></i><i></i></div>
+<main class="wrap">
+  <header>
+    <h1>fosames</h1>
+    <p class="tag"><span class="en">Fast, juicy mobile web games. Tap and play — no install.</span><span class="ru">Быстрые сочные мобильные веб-игры. Тапни и играй — без установки.</span></p>
+    <span class="count"><span class="en">1 game</span><span class="ru">Игр: 1</span></span>
+  </header>
+  <ul class="grid">
+    <li class="card" style="--accent:#39e8b6;--card-bg:#070b12;--i:0">
+      <a href="./elixir-lab/" aria-label="Elixir Lab">
+        <div class="media"><div class="frame"><span class="ph" aria-hidden="true">⚗️</span></div><span class="emoji" aria-hidden="true">⚗️</span></div>
+        <div class="body">
+          <div class="row"><h2>Elixir Lab</h2><span class="genre">puzzle</span></div>
+          <p class="en">Pour glowing elixirs between glass flasks until every potion is pure. Hidden layers, frozen vials, a daily brew.</p>
+          <p class="ru">Переливай светящиеся эликсиры по колбам, пока каждое зелье не станет чистым. Скрытые слои, лёд и эликсир дня.</p>
+          <span class="play"><span class="en">Play</span><span class="ru">Играть</span> →</span>
+        </div>
+      </a>
+    </li>
+  </ul>
+  <footer><a href="https://github.com/fosemberg/fosames">source on GitHub</a></footer>
+</main>
+</body>
+</html>

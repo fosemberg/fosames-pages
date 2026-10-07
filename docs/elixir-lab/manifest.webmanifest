@@ -1,0 +1,14 @@
+{
+  "name": "Elixir Lab",
+  "short_name": "Elixir Lab",
+  "description": "Liquid sort puzzle: pour glowing elixirs between glass flasks until every potion is pure.",
+  "lang": "en",
+  "categories": ["games", "puzzle"],
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#070b12",
+  "theme_color": "#070b12",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

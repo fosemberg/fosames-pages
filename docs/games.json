@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "elixir-lab",
+    "title": "Elixir Lab",
+    "description": "Pour glowing elixirs between glass flasks until every potion is pure. Hidden layers, frozen vials, a daily brew.",
+    "descriptionRu": "Переливай светящиеся эликсиры по колбам, пока каждое зелье не станет чистым. Скрытые слои, лёд и эликсир дня.",
+    "genre": "puzzle",
+    "emoji": "⚗️",
+    "accent": "#39e8b6",
+    "order": 2,
+    "url": "./elixir-lab/",
+    "thumb": null
+  }
+]
