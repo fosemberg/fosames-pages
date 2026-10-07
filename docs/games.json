@@ -22,5 +22,17 @@
     "order": 3,
     "url": "./nova-merge/",
     "thumb": null
+  },
+  {
+    "slug": "mosaic-breaker",
+    "title": "Mosaic Breaker",
+    "description": "Send colour-matched tapers around the rail to chip a glass mosaic apart — and uncover the painting hidden beneath it.",
+    "descriptionRu": "Отправляй цветные фитили по рельсу, разбирай стеклянную мозаику по цветам и открывай картину, спрятанную под ней.",
+    "genre": "Colour-sort puzzle",
+    "emoji": "🪟",
+    "accent": "#ff5e7a",
+    "order": 8,
+    "url": "./mosaic-breaker/",
+    "thumb": null
   }
 ]

@@ -1,0 +1,12 @@
+{
+  "name": "Mosaic Breaker",
+  "short_name": "Mosaic",
+  "description": "Chip a glass mosaic apart colour by colour and uncover the painting underneath.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#0a0e1a",
+  "theme_color": "#0a0e1a",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
