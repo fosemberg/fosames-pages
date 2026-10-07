@@ -1,0 +1,14 @@
+{
+  "name": "Nova Merge",
+  "short_name": "Nova",
+  "description": "Drop celestial bodies into a gravity well, merge twins and forge a Nova.",
+  "lang": "en",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#05030f",
+  "theme_color": "#05030f",
+  "categories": ["games", "puzzle"],
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

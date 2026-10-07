@@ -10,5 +10,17 @@
     "order": 2,
     "url": "./elixir-lab/",
     "thumb": null
+  },
+  {
+    "slug": "nova-merge",
+    "title": "Nova Merge",
+    "description": "Drop worlds into the gravity well, merge twins and forge a Nova.",
+    "descriptionRu": "Бросай миры в гравитационный колодец, сливай близнецов и собери Нову.",
+    "genre": "Merge physics",
+    "emoji": "🪐",
+    "accent": "#8a5cff",
+    "order": 3,
+    "url": "./nova-merge/",
+    "thumb": null
   }
 ]
