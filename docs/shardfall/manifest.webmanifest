@@ -1,0 +1,14 @@
+{
+  "name": "Shardfall",
+  "short_name": "Shardfall",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "description": "Match-3 among the stars: swap faceted sky-shards, chain cascades and rebuild the crystal observatory.",
+  "lang": "en",
+  "categories": ["games", "puzzle"],
+  "background_color": "#05070f",
+  "theme_color": "#05070f",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

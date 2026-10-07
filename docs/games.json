@@ -178,5 +178,17 @@
     "order": 15,
     "url": "./sinkhole/",
     "thumb": null
+  },
+  {
+    "slug": "shardfall",
+    "title": "Shardfall",
+    "description": "Swap faceted sky-shards, chain cascades, charge the Beacon and rebuild the crystal observatory.",
+    "descriptionRu": "Меняй гранёные небесные осколки, собирай каскады, заряжай Маяк и восстанавливай кристальную обсерваторию.",
+    "genre": "match-3",
+    "emoji": "💠",
+    "accent": "#35d7ff",
+    "order": 16,
+    "url": "./shardfall/",
+    "thumb": null
   }
 ]
