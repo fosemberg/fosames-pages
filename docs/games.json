@@ -81,7 +81,7 @@
     "accent": "#35f0ff",
     "order": 7,
     "url": "./ink-wheels/",
-    "thumb": null
+    "thumb": "./ink-wheels/thumb.jpg"
   },
   {
     "slug": "mosaic-breaker",
