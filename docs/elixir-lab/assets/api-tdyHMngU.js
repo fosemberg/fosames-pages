@@ -1,0 +1,1 @@
+var e=[`#ff4d5e`,`#ff9f2e`,`#f2e04d`,`#5ad666`,`#2fe0c8`,`#3aa0ff`,`#7b6cff`,`#c86bff`,`#ff5fc4`,`#e9e3d2`,`#8296ad`,`#3b4668`],t=[`◆`,`▲`,`●`,`■`,`✦`,`▼`,`⬟`,`✶`,`✚`,`○`,`◗`,`◈`],n={bg0:`#070b12`,bg1:`#0d1422`,bench:`#17202e`,brass:`#c8963e`,glass:`#cfe8ff`,accent:`#39e8b6`,accentWarm:`#ffd479`,danger:`#ff5b6e`,text:`#e8f1ff`};export{t as n,n as r,e as t};
