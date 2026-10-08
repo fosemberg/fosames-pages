@@ -69,7 +69,7 @@
     "accent": "#ff2d95",
     "order": 6,
     "url": "./hyperlane/",
-    "thumb": null
+    "thumb": "./hyperlane/thumb.jpg"
   },
   {
     "slug": "ink-wheels",
