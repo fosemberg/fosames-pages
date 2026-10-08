@@ -45,7 +45,7 @@
     "accent": "#ffb84d",
     "order": 4,
     "url": "./lumen-horde/",
-    "thumb": null
+    "thumb": "./lumen-horde/thumb.jpg"
   },
   {
     "slug": "jade-trio",
