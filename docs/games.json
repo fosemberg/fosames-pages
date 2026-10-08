@@ -93,7 +93,7 @@
     "accent": "#ff5e7a",
     "order": 8,
     "url": "./mosaic-breaker/",
-    "thumb": null
+    "thumb": "./mosaic-breaker/thumb.jpg"
   },
   {
     "slug": "aurora-tower",
