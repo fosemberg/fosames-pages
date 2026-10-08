@@ -33,7 +33,7 @@
     "accent": "#8a5cff",
     "order": 3,
     "url": "./nova-merge/",
-    "thumb": null
+    "thumb": "./nova-merge/thumb.jpg"
   },
   {
     "slug": "lumen-horde",
