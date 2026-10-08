@@ -177,7 +177,7 @@
     "accent": "#ff8a3d",
     "order": 15,
     "url": "./sinkhole/",
-    "thumb": null
+    "thumb": "./sinkhole/thumb.jpg"
   },
   {
     "slug": "shardfall",
