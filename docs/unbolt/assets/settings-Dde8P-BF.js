@@ -1,0 +1,1 @@
+var e={music:.55,sfx:.9,vibration:!0,quality:`auto`,glyphs:`normal`,reducedMotion:`auto`};export{e as t};
