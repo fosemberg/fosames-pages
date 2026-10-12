@@ -190,5 +190,17 @@
     "order": 16,
     "url": "./shardfall/",
     "thumb": "./shardfall/thumb.jpg"
+  },
+  {
+    "slug": "fosilk",
+    "title": "FosIlk",
+    "description": "Dairy rush in 3D: graze the herd, blend the fat, duel lactose with a sword-swinging lactase and ship every order.",
+    "descriptionRu": "Молочный аврал в 3D: пасите стадо, сводите жирность, рубите лактозу мечом лактазы и успевайте с заказами.",
+    "genre": "time-management · 3D",
+    "emoji": "🥛",
+    "accent": "#ff6fa8",
+    "order": 17,
+    "url": "./fosilk/",
+    "thumb": "./fosilk/thumb.jpg"
   }
 ]

@@ -1,0 +1,12 @@
+{
+  "name": "FosIlk",
+  "short_name": "FosIlk",
+  "description": "Dairy rush in 3D: graze, blend the fat, cut the lactose, ship the order.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#101a2e",
+  "theme_color": "#101a2e",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
