@@ -1,4 +1,4 @@
-import{d as e,f as t}from"./index-BxsI0oKr.js";var n=`#version 300 es
+import{d as e,f as t}from"./index-DbResxhj.js";var n=`#version 300 es
 // Attribute-less fullscreen triangle: draw with gl.drawArrays(gl.TRIANGLES, 0, 3) and an empty VAO.
 void main() {
   vec2 p = vec2(float((gl_VertexID << 1) & 2), float(gl_VertexID & 2));
