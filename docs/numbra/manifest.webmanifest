@@ -1,0 +1,12 @@
+{
+  "name": "Numbra",
+  "short_name": "Numbra",
+  "description": "Three number puzzles under one lantern: sudoku, Tenlight pairs and Sparkfield, plus a daily triptych.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#0a0b12",
+  "theme_color": "#0a0b12",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

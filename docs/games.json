@@ -358,5 +358,17 @@
     "order": 18,
     "url": "./tidewords/",
     "thumb": "./tidewords/thumb.jpg"
+  },
+  {
+    "slug": "numbra",
+    "title": "Numbra",
+    "description": "Three number puzzles under one lantern: sudoku, Tenlight pairs and Sparkfield — with a hint that shows the reasoning, and a daily triptych.",
+    "descriptionRu": "Три числовые головоломки под одним фонарём: судоку, пары «Тенлайт» и «Спаркфилд» — подсказка показывает ход мысли, а триптих дня даёт серию.",
+    "genre": "logic puzzle",
+    "emoji": "🏮",
+    "accent": "#ffb454",
+    "order": 19,
+    "url": "./numbra/",
+    "thumb": "./numbra/thumb.jpg"
   }
 ]
