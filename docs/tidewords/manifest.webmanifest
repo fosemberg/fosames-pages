@@ -1,0 +1,11 @@
+{
+  "name": "Tidewords",
+  "short_name": "Tidewords",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#0b2230",
+  "theme_color": "#0b2230",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
