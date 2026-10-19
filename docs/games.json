@@ -84,18 +84,6 @@
     "thumb": "./_links/fosain.jpg"
   },
   {
-    "slug": "fosio",
-    "title": "Fosio",
-    "description": "Monsters at a fair: grab dice, storm banners, earn glory",
-    "descriptionRu": "Чудища на ярмарке: бери кубики, штурмуй знамёна, копи славу",
-    "genre": "dice strategy",
-    "emoji": "🎲",
-    "accent": "#ff5fa2",
-    "order": -993,
-    "url": "https://fosemberg.github.io/fosio-pages/",
-    "thumb": "./_links/fosio.jpg"
-  },
-  {
     "slug": "fosmos",
     "title": "Fosmos",
     "description": "A space RPG: trade, hunt pirates and seal the wells",
@@ -103,9 +91,21 @@
     "genre": "space RPG",
     "emoji": "🚀",
     "accent": "#8a7bff",
-    "order": -992,
+    "order": -993,
     "url": "https://fosemberg.github.io/fosmos-pages/",
     "thumb": "./_links/fosmos.jpg"
+  },
+  {
+    "slug": "fosio",
+    "title": "Fosio",
+    "description": "Monsters at a fair: grab dice, storm banners, earn glory",
+    "descriptionRu": "Чудища на ярмарке: бери кубики, штурмуй знамёна, копи славу",
+    "genre": "dice strategy",
+    "emoji": "🎲",
+    "accent": "#ff5fa2",
+    "order": -992,
+    "url": "https://fosemberg.github.io/fosio-pages/",
+    "thumb": "./_links/fosio.jpg"
   },
   {
     "slug": "sinkhole",
