@@ -382,5 +382,17 @@
     "order": 22,
     "url": "./moonwell/",
     "thumb": "./moonwell/thumb.jpg"
+  },
+  {
+    "slug": "keenlight",
+    "title": "Keenlight",
+    "description": "A three-minute daily logic sprint: 12 generated puzzles, an adaptive Keen meter, your percentile among today's players.",
+    "descriptionRu": "Трёхминутный логический спринт дня: 12 сгенерированных задач, адаптивный Keen-метр и процентиль среди игроков дня.",
+    "genre": "daily logic sprint · puzzle",
+    "emoji": "🔆",
+    "accent": "#c8ff4d",
+    "order": 24,
+    "url": "./keenlight/",
+    "thumb": "./keenlight/thumb.jpg"
   }
 ]

@@ -1,0 +1,12 @@
+{
+  "name": "Keenlight",
+  "short_name": "Keenlight",
+  "description": "A three-minute daily logic sprint with an adaptive Keen meter.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#0e1220",
+  "theme_color": "#0e1220",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
