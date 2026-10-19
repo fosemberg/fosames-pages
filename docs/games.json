@@ -84,18 +84,6 @@
     "thumb": "./_links/fosain.jpg"
   },
   {
-    "slug": "fosin",
-    "title": "Fosin",
-    "description": "A card race to the ocean floor: dive deeper and prank your rivals",
-    "descriptionRu": "Карточная гонка дайверов на дно: ныряй глубже и подставляй соседей",
-    "genre": "card race",
-    "emoji": "🤿",
-    "accent": "#2ee6d6",
-    "order": -993,
-    "url": "https://fosemberg.github.io/fosin-pages/",
-    "thumb": "./_links/fosin.jpg"
-  },
-  {
     "slug": "fosio",
     "title": "Fosio",
     "description": "Monsters at a fair: grab dice, storm banners, earn glory",
@@ -103,7 +91,7 @@
     "genre": "dice strategy",
     "emoji": "🎲",
     "accent": "#ff5fa2",
-    "order": -992,
+    "order": -993,
     "url": "https://fosemberg.github.io/fosio-pages/",
     "thumb": "./_links/fosio.jpg"
   },
@@ -115,21 +103,21 @@
     "genre": "space RPG",
     "emoji": "🚀",
     "accent": "#8a7bff",
-    "order": -991,
+    "order": -992,
     "url": "https://fosemberg.github.io/fosmos-pages/",
     "thumb": "./_links/fosmos.jpg"
   },
   {
-    "slug": "fosoba",
-    "title": "Fosoba",
-    "description": "A browser MOBA: lanes, minions, towers and a push to the core",
-    "descriptionRu": "MOBA в браузере: линия, крипы, башни и бой до вражеского ядра",
-    "genre": "MOBA",
-    "emoji": "🗼",
-    "accent": "#4fa3ff",
-    "order": -990,
-    "url": "https://fosemberg.github.io/fosoba-pages/",
-    "thumb": "./_links/fosoba.jpg"
+    "slug": "sinkhole",
+    "title": "Sinkhole Rush",
+    "description": "Steer a hungry sinkhole through a sun-baked boomtown: swallow benches, cars and tower blocks, trigger Cascade Blooms and outgrow five rival pits before the clock dies.",
+    "descriptionRu": "Веди голодный провал по глинобитному городку: глотай скамейки, машины и высотки, запускай «Каскад» и обгони пять соперников до конца раунда.",
+    "genre": "arcade",
+    "emoji": "🕳️",
+    "accent": "#ff8a3d",
+    "order": -991,
+    "url": "./sinkhole/",
+    "thumb": "./sinkhole/thumb.jpg"
   },
   {
     "slug": "fosombat",
@@ -139,7 +127,7 @@
     "genre": "fighting",
     "emoji": "🥊",
     "accent": "#d65bff",
-    "order": -989,
+    "order": -990,
     "url": "https://fosemberg.github.io/fosombat-pages/",
     "thumb": "./_links/fosombat.jpg"
   },
@@ -151,9 +139,21 @@
     "genre": "tower defence",
     "emoji": "🏰",
     "accent": "#4fe39b",
-    "order": -988,
+    "order": -989,
     "url": "https://fosemberg.github.io/fostd-pages/",
     "thumb": "./_links/fostd.jpg"
+  },
+  {
+    "slug": "fosin",
+    "title": "Fosin",
+    "description": "A card race to the ocean floor: dive deeper and prank your rivals",
+    "descriptionRu": "Карточная гонка дайверов на дно: ныряй глубже и подставляй соседей",
+    "genre": "card race",
+    "emoji": "🤿",
+    "accent": "#2ee6d6",
+    "order": -988,
+    "url": "https://fosemberg.github.io/fosin-pages/",
+    "thumb": "./_links/fosin.jpg"
   },
   {
     "slug": "prism-grid",
@@ -312,18 +312,6 @@
     "thumb": "./rune-bastion/thumb.jpg"
   },
   {
-    "slug": "sinkhole",
-    "title": "Sinkhole Rush",
-    "description": "Steer a hungry sinkhole through a sun-baked boomtown: swallow benches, cars and tower blocks, trigger Cascade Blooms and outgrow five rival pits before the clock dies.",
-    "descriptionRu": "Веди голодный провал по глинобитному городку: глотай скамейки, машины и высотки, запускай «Каскад» и обгони пять соперников до конца раунда.",
-    "genre": "arcade",
-    "emoji": "🕳️",
-    "accent": "#ff8a3d",
-    "order": 15,
-    "url": "./sinkhole/",
-    "thumb": "./sinkhole/thumb.jpg"
-  },
-  {
     "slug": "shardfall",
     "title": "Shardfall",
     "description": "Swap faceted sky-shards, chain cascades, charge the Beacon and rebuild the crystal observatory.",
@@ -394,5 +382,17 @@
     "order": 24,
     "url": "./keenlight/",
     "thumb": "./keenlight/thumb.jpg"
+  },
+  {
+    "slug": "fosoba",
+    "title": "Fosoba",
+    "description": "A browser MOBA: lanes, minions, towers and a push to the core",
+    "descriptionRu": "MOBA в браузере: линия, крипы, башни и бой до вражеского ядра",
+    "genre": "MOBA",
+    "emoji": "🗼",
+    "accent": "#4fa3ff",
+    "order": 1014,
+    "url": "https://fosemberg.github.io/fosoba-pages/",
+    "thumb": "./_links/fosoba.jpg"
   }
 ]
