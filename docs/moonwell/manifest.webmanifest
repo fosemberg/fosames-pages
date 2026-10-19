@@ -1,0 +1,12 @@
+{
+  "name": "Moonwell Solitaire",
+  "short_name": "Moonwell",
+  "description": "Klondike and FreeCell in a midnight garden. Every deal is winnable; the daily deal is the same for everyone.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "any",
+  "background_color": "#10131f",
+  "theme_color": "#10131f",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

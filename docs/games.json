@@ -370,5 +370,17 @@
     "order": 19,
     "url": "./numbra/",
     "thumb": "./numbra/thumb.jpg"
+  },
+  {
+    "slug": "moonwell",
+    "title": "Moonwell Solitaire",
+    "description": "Klondike and FreeCell in a midnight garden: every deal is winnable, the daily deal is the same for everyone.",
+    "descriptionRu": "Косынка и FreeCell в полночном саду: каждая раздача решаема, раздача дня одна на всех.",
+    "genre": "solitaire",
+    "emoji": "🌙",
+    "accent": "#c9a44c",
+    "order": 22,
+    "url": "./moonwell/",
+    "thumb": "./moonwell/thumb.jpg"
   }
 ]
