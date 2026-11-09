@@ -84,6 +84,23 @@
           background: linear-gradient(100deg, var(--accent), color-mix(in srgb, var(--accent) 50%, #22d3ee)); color: #fff;
           box-shadow: 0 6px 20px -6px var(--accent); }
   .empty { text-align: center; color: var(--muted); padding: 60px 0; }
+  [hidden] { display: none !important; }
+
+  /* offline: the "download all" button and the per-card mark (driven by sw.js through the script below) */
+  .offline { display: flex; flex-direction: column; align-items: center; gap: 8px; margin: -10px 0 24px; }
+  .dl { font: inherit; font-weight: 800; font-size: 15px; color: var(--fg); cursor: pointer; padding: 10px 18px; border-radius: 999px;
+        display: inline-flex; align-items: baseline; gap: 10px; border: 1px solid rgb(255 255 255 / .14); background: rgb(255 255 255 / .07);
+        transition: background .2s; }
+  .dl:hover:not(:disabled) { background: rgb(255 255 255 / .13); }
+  .dl:disabled { cursor: default; }
+  .dl .sz { font-size: 13px; font-weight: 700; color: var(--muted); }
+  .dl.is-done { border-color: rgb(110 231 183 / .45); background: rgb(110 231 183 / .1); }
+  .bar { width: min(320px, 80vw); height: 4px; border-radius: 4px; overflow: hidden; background: rgb(255 255 255 / .1); }
+  .bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #7c5cff, #22d3ee); transition: width .2s; }
+  .kept { position: absolute; top: 8px; right: 8px; display: none; padding: 3px 8px; border-radius: 999px; font-size: 11px; font-weight: 800;
+          color: #6ee7b7; background: rgb(7 5 26 / .75); border: 1px solid rgb(110 231 183 / .45); }
+  .card.is-kept .kept { display: block; }
+  html.is-offline .card:not([data-slug]) a { opacity: .45; }
   footer { margin-top: 36px; text-align: center; color: var(--muted); font-size: 13px; }
   footer a { color: inherit; }
   @media (max-width: 560px) {
@@ -107,6 +124,10 @@
     <p class="tag"><span class="en">Fast, juicy mobile web games. Tap and play — no install.</span><span class="ru">Быстрые сочные мобильные веб-игры. Тапни и играй — без установки.</span></p>
     <span class="count"><span class="en">33 games</span><span class="ru">Игр: 33</span></span>
   </header>
+  <section class="offline" id="offline" hidden>
+    <button type="button" class="dl" id="dl"><span class="lbl"></span><span class="sz"></span></button>
+    <div class="bar" hidden><i></i></div>
+  </section>
   <ul class="grid">
     <li class="card" style="--accent:#f5b83d;--card-bg:#0d0b14;--i:0">
       <a href="https://fosord.ru/" target="_blank" rel="noopener" aria-label="FosOrd">
@@ -130,9 +151,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#8a5cff;--card-bg:#05030f;--i:2">
+    <li class="card" data-slug="nova-merge" style="--accent:#8a5cff;--card-bg:#05030f;--i:2">
       <a href="./nova-merge/" target="_blank" rel="noopener" aria-label="Nova Merge">
-        <div class="media"><div class="frame"><img src="./nova-merge/thumb.jpg" alt="" loading="eager" decoding="async"></div><span class="emoji" aria-hidden="true">🪐</span></div>
+        <div class="media"><div class="frame"><img src="./nova-merge/thumb.jpg" alt="" loading="eager" decoding="async"></div><span class="emoji" aria-hidden="true">🪐</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Nova Merge</h2><span class="genre">Merge physics</span></div>
           <p class="en">Drop worlds into the gravity well, merge twins and forge a Nova.</p>
@@ -207,9 +228,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#ff8a3d;--card-bg:#1a1026;--i:9">
+    <li class="card" data-slug="sinkhole" style="--accent:#ff8a3d;--card-bg:#1a1026;--i:9">
       <a href="./sinkhole/" target="_blank" rel="noopener" aria-label="Sinkhole Rush">
-        <div class="media"><div class="frame"><img src="./sinkhole/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🕳️</span></div>
+        <div class="media"><div class="frame"><img src="./sinkhole/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🕳️</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Sinkhole Rush</h2><span class="genre">arcade</span></div>
           <p class="en">Steer a hungry sinkhole through a sun-baked boomtown: swallow benches, cars and tower blocks, trigger Cascade Blooms and outgrow five rival pits before the clock dies.</p>
@@ -251,9 +272,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#4ee7ff;--card-bg:#070b18;--i:13">
+    <li class="card" data-slug="prism-grid" style="--accent:#4ee7ff;--card-bg:#070b18;--i:13">
       <a href="./prism-grid/" target="_blank" rel="noopener" aria-label="Prism Grid">
-        <div class="media"><div class="frame"><span class="ph" aria-hidden="true">💠</span></div><span class="emoji" aria-hidden="true">💠</span></div>
+        <div class="media"><div class="frame"><span class="ph" aria-hidden="true">💠</span></div><span class="emoji" aria-hidden="true">💠</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Prism Grid</h2><span class="genre">Block puzzle</span></div>
           <p class="en">Drop glowing prisms on an 8x8 grid, clear rows and columns, chain combos. Classic, Daily seed and a 30-level Journey.</p>
@@ -262,9 +283,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#39e8b6;--card-bg:#070b12;--i:14">
+    <li class="card" data-slug="elixir-lab" style="--accent:#39e8b6;--card-bg:#070b12;--i:14">
       <a href="./elixir-lab/" target="_blank" rel="noopener" aria-label="Elixir Lab">
-        <div class="media"><div class="frame"><img src="./elixir-lab/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">⚗️</span></div>
+        <div class="media"><div class="frame"><img src="./elixir-lab/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">⚗️</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Elixir Lab</h2><span class="genre">puzzle</span></div>
           <p class="en">Pour glowing elixirs between glass flasks until every potion is pure. Hidden layers, frozen vials, a daily brew.</p>
@@ -273,9 +294,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#ffb84d;--card-bg:#05060d;--i:15">
+    <li class="card" data-slug="lumen-horde" style="--accent:#ffb84d;--card-bg:#05060d;--i:15">
       <a href="./lumen-horde/" target="_blank" rel="noopener" aria-label="Lumen Horde">
-        <div class="media"><div class="frame"><img src="./lumen-horde/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🕯️</span></div>
+        <div class="media"><div class="frame"><img src="./lumen-horde/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🕯️</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Lumen Horde</h2><span class="genre">Survivor-like roguelite</span></div>
           <p class="en">You are the only light in the dark. Survive 10 minutes against the shadow horde, pick one upgrade of three, turn your light into weapons.</p>
@@ -284,9 +305,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#3fd6a3;--card-bg:#0a1418;--i:16">
+    <li class="card" data-slug="jade-trio" style="--accent:#3fd6a3;--card-bg:#0a1418;--i:16">
       <a href="./jade-trio/" target="_blank" rel="noopener" aria-label="Jade Trio">
-        <div class="media"><div class="frame"><img src="./jade-trio/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🀄</span></div>
+        <div class="media"><div class="frame"><img src="./jade-trio/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🀄</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Jade Trio</h2><span class="genre">tile puzzle</span></div>
           <p class="en">Jade and porcelain tile puzzle: match free tiles in threes on a 7-slot alcove, or clear classic layouts in pairs.</p>
@@ -295,9 +316,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#ff2d95;--card-bg:#0a0618;--i:17">
+    <li class="card" data-slug="hyperlane" style="--accent:#ff2d95;--card-bg:#0a0618;--i:17">
       <a href="./hyperlane/" target="_blank" rel="noopener" aria-label="Hyperlane">
-        <div class="media"><div class="frame"><img src="./hyperlane/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🛣️</span></div>
+        <div class="media"><div class="frame"><img src="./hyperlane/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🛣️</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Hyperlane</h2><span class="genre">3D endless runner</span></div>
           <p class="en">A neon three-lane runner: swipe to dodge, jump and slide while the world hyperjumps between city, conduit and orbit.</p>
@@ -306,9 +327,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#35f0ff;--card-bg:#0a1020;--i:18">
+    <li class="card" data-slug="ink-wheels" style="--accent:#35f0ff;--card-bg:#0a1020;--i:18">
       <a href="./ink-wheels/" target="_blank" rel="noopener" aria-label="Ink Wheels">
-        <div class="media"><div class="frame"><img src="./ink-wheels/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🛞</span></div>
+        <div class="media"><div class="frame"><img src="./ink-wheels/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🛞</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Ink Wheels</h2><span class="genre">physics driving puzzle</span></div>
           <p class="en">Draw the wheels, then drive them: hold to roll across 24 neon-ink stunt tracks.</p>
@@ -317,9 +338,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#ff5e7a;--card-bg:#0a0e1a;--i:19">
+    <li class="card" data-slug="mosaic-breaker" style="--accent:#ff5e7a;--card-bg:#0a0e1a;--i:19">
       <a href="./mosaic-breaker/" target="_blank" rel="noopener" aria-label="Mosaic Breaker">
-        <div class="media"><div class="frame"><img src="./mosaic-breaker/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🪟</span></div>
+        <div class="media"><div class="frame"><img src="./mosaic-breaker/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🪟</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Mosaic Breaker</h2><span class="genre">Colour-sort puzzle</span></div>
           <p class="en">Send colour-matched tapers around the rail to chip a glass mosaic apart — and uncover the painting hidden beneath it.</p>
@@ -328,9 +349,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#3ef0b0;--card-bg:#070b18;--i:20">
+    <li class="card" data-slug="aurora-tower" style="--accent:#3ef0b0;--card-bg:#070b18;--i:20">
       <a href="./aurora-tower/" target="_blank" rel="noopener" aria-label="Aurora Tower">
-        <div class="media"><div class="frame"><img src="./aurora-tower/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🏙️</span></div>
+        <div class="media"><div class="frame"><img src="./aurora-tower/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🏙️</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Aurora Tower</h2><span class="genre">arcade</span></div>
           <p class="en">One-tap glass stacker: drop sliding panes, land them flush, ride the beat and build a spire into the aurora.</p>
@@ -339,9 +360,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#ff7a3c;--card-bg:#050309;--i:21">
+    <li class="card" data-slug="singularity" style="--accent:#ff7a3c;--card-bg:#050309;--i:21">
       <a href="./singularity/" target="_blank" rel="noopener" aria-label="Hungry Singularity">
-        <div class="media"><div class="frame"><img src="./singularity/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🕳️</span></div>
+        <div class="media"><div class="frame"><img src="./singularity/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🕳️</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Hungry Singularity</h2><span class="genre">idle</span></div>
           <p class="en">Feed a growing black hole: fling matter past the event horizon, hire cosmic attractors, time the Tidal Surge for x5, then collapse everything into a new universe.</p>
@@ -350,9 +371,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#19f0ff;--card-bg:#04060e;--i:22">
+    <li class="card" data-slug="neon-coil" style="--accent:#19f0ff;--card-bg:#04060e;--i:22">
       <a href="./neon-coil/" target="_blank" rel="noopener" aria-label="Neon Coil">
-        <div class="media"><div class="frame"><img src="./neon-coil/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🐍</span></div>
+        <div class="media"><div class="frame"><img src="./neon-coil/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🐍</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Neon Coil</h2><span class="genre">io arena · snake · territory</span></div>
           <p class="en">Live-wire snake arena: swallow motes, ring your rivals to burst them and paint the lattice in your light — 3 minutes, 40 rivals, two modes.</p>
@@ -361,9 +382,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#2FE3C8;--card-bg:#0A0E14;--i:23">
+    <li class="card" data-slug="unbolt" style="--accent:#2FE3C8;--card-bg:#0A0E14;--i:23">
       <a href="./unbolt/" target="_blank" rel="noopener" aria-label="Unbolt">
-        <div class="media"><div class="frame"><img src="./unbolt/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🔩</span></div>
+        <div class="media"><div class="frame"><img src="./unbolt/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🔩</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Unbolt</h2><span class="genre">3D puzzle</span></div>
           <p class="en">Strip a 3D machine bolt by bolt: spin the cradle, sort every screw into its crate, keep the rail clear and shelve the exhibit.</p>
@@ -372,9 +393,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#ffc663;--card-bg:#080a16;--i:24">
+    <li class="card" data-slug="glyph-daily" style="--accent:#ffc663;--card-bg:#080a16;--i:24">
       <a href="./glyph-daily/" target="_blank" rel="noopener" aria-label="Glyph">
-        <div class="media"><div class="frame"><span class="ph" aria-hidden="true">🔆</span></div><span class="emoji" aria-hidden="true">🔆</span></div>
+        <div class="media"><div class="frame"><span class="ph" aria-hidden="true">🔆</span></div><span class="emoji" aria-hidden="true">🔆</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Glyph</h2><span class="genre">Daily word puzzle</span></div>
           <p class="en">One hidden five-letter word a day, six tries, glowing glass runes — in English and Russian.</p>
@@ -383,9 +404,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#5ee6c4;--card-bg:#060814;--i:25">
+    <li class="card" data-slug="rune-bastion" style="--accent:#5ee6c4;--card-bg:#060814;--i:25">
       <a href="./rune-bastion/" target="_blank" rel="noopener" aria-label="Rune Bastion">
-        <div class="media"><div class="frame"><img src="./rune-bastion/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🛡️</span></div>
+        <div class="media"><div class="frame"><img src="./rune-bastion/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🛡️</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Rune Bastion</h2><span class="genre">strategy</span></div>
           <p class="en">Summon rune towers, merge them into greater sigils and hold the leyline against the crystal horde.</p>
@@ -394,9 +415,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#35d7ff;--card-bg:#05070f;--i:26">
+    <li class="card" data-slug="shardfall" style="--accent:#35d7ff;--card-bg:#05070f;--i:26">
       <a href="./shardfall/" target="_blank" rel="noopener" aria-label="Shardfall">
-        <div class="media"><div class="frame"><img src="./shardfall/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">💠</span></div>
+        <div class="media"><div class="frame"><img src="./shardfall/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">💠</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Shardfall</h2><span class="genre">match-3</span></div>
           <p class="en">Swap faceted sky-shards, chain cascades, charge the Beacon and rebuild the crystal observatory.</p>
@@ -405,9 +426,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#ff6fa8;--card-bg:#101a2e;--i:27">
+    <li class="card" data-slug="fosilk" style="--accent:#ff6fa8;--card-bg:#101a2e;--i:27">
       <a href="./fosilk/" target="_blank" rel="noopener" aria-label="FosIlk">
-        <div class="media"><div class="frame"><img src="./fosilk/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🥛</span></div>
+        <div class="media"><div class="frame"><img src="./fosilk/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🥛</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>FosIlk</h2><span class="genre">time-management · 3D</span></div>
           <p class="en">Dairy rush in 3D: graze the herd, blend the fat, duel lactose with a sword-swinging lactase and ship every order.</p>
@@ -416,9 +437,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#ff6f61;--card-bg:#0b2230;--i:28">
+    <li class="card" data-slug="tidewords" style="--accent:#ff6f61;--card-bg:#0b2230;--i:28">
       <a href="./tidewords/" target="_blank" rel="noopener" aria-label="Tidewords">
-        <div class="media"><div class="frame"><img src="./tidewords/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🌊</span></div>
+        <div class="media"><div class="frame"><img src="./tidewords/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🌊</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Tidewords</h2><span class="genre">word puzzle</span></div>
           <p class="en">Swipe snake-paths through a sea-glass reef to find every word of the island&#39;s theme; the tide refills the gaps.</p>
@@ -427,9 +448,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#ffb454;--card-bg:#0a0b12;--i:29">
+    <li class="card" data-slug="numbra" style="--accent:#ffb454;--card-bg:#0a0b12;--i:29">
       <a href="./numbra/" target="_blank" rel="noopener" aria-label="Numbra">
-        <div class="media"><div class="frame"><img src="./numbra/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🏮</span></div>
+        <div class="media"><div class="frame"><img src="./numbra/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🏮</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Numbra</h2><span class="genre">logic puzzle</span></div>
           <p class="en">Three number puzzles under one lantern: sudoku, Tenlight pairs and Sparkfield — with a hint that shows the reasoning, and a daily triptych.</p>
@@ -438,9 +459,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#c9a44c;--card-bg:#10131f;--i:30">
+    <li class="card" data-slug="moonwell" style="--accent:#c9a44c;--card-bg:#10131f;--i:30">
       <a href="./moonwell/" target="_blank" rel="noopener" aria-label="Moonwell Solitaire">
-        <div class="media"><div class="frame"><img src="./moonwell/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🌙</span></div>
+        <div class="media"><div class="frame"><img src="./moonwell/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🌙</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Moonwell Solitaire</h2><span class="genre">solitaire</span></div>
           <p class="en">Klondike and FreeCell in a midnight garden: every deal is winnable, the daily deal is the same for everyone.</p>
@@ -449,9 +470,9 @@
         </div>
       </a>
     </li>
-    <li class="card" style="--accent:#c8ff4d;--card-bg:#0e1220;--i:31">
+    <li class="card" data-slug="keenlight" style="--accent:#c8ff4d;--card-bg:#0e1220;--i:31">
       <a href="./keenlight/" target="_blank" rel="noopener" aria-label="Keenlight">
-        <div class="media"><div class="frame"><img src="./keenlight/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🔆</span></div>
+        <div class="media"><div class="frame"><img src="./keenlight/thumb.jpg" alt="" loading="lazy" decoding="async"></div><span class="emoji" aria-hidden="true">🔆</span><span class="kept"><span class="en">offline ✓</span><span class="ru">офлайн ✓</span></span></div>
         <div class="body">
           <div class="row"><h2>Keenlight</h2><span class="genre">daily logic sprint · puzzle</span></div>
           <p class="en">A three-minute daily logic sprint: 12 generated puzzles, an adaptive Keen meter, your percentile among today&#39;s players.</p>
@@ -474,5 +495,94 @@
   </ul>
   <footer><a href="https://github.com/fosemberg/fosames" target="_blank" rel="noopener">source on GitHub</a></footer>
 </main>
+<script>
+(function () {
+  var box = document.getElementById('offline')
+  if (!box || !('serviceWorker' in navigator)) return
+  var SIZES = {"prism-grid":465415,"elixir-lab":473598,"nova-merge":434553,"lumen-horde":520830,"jade-trio":383243,"hyperlane":433282,"ink-wheels":377953,"mosaic-breaker":380244,"aurora-tower":366282,"singularity":407047,"neon-coil":392457,"unbolt":411367,"glyph-daily":459623,"rune-bastion":393948,"sinkhole":404407,"shardfall":464295,"fosilk":401996,"tidewords":331042,"numbra":343532,"moonwell":316563,"keenlight":326035}
+  var slugs = Object.keys(SIZES)
+  var ru = document.documentElement.lang === 'ru'
+  var btn = document.getElementById('dl'), lbl = btn.querySelector('.lbl'), sz = btn.querySelector('.sz')
+  var bar = box.querySelector('.bar'), fill = bar.querySelector('i')
+  var state = {}, busy = false, failed = false
+  var html = document.documentElement
+  function net() { html.classList.toggle('is-offline', !navigator.onLine) }
+  addEventListener('online', net); addEventListener('offline', net); net()
+  navigator.serviceWorker.register('./sw.js').catch(function () {})
+  if (!slugs.length) return
+  box.hidden = false
+
+  function mb(n) { var s = (n / 1048576).toFixed(1); return ru ? s.replace('.', ',') + ' МБ' : s + ' MB' }
+  function show(label, size, done) { lbl.textContent = label; sz.textContent = size || ''; btn.classList.toggle('is-done', !!done); btn.disabled = !!done || busy }
+  function left() { return slugs.filter(function (s) { return state[s] !== 'whole' }) }
+  function render() {
+    for (var li of document.querySelectorAll('li[data-slug]')) {
+      var st = state[li.getAttribute('data-slug')]
+      li.classList.toggle('is-kept', st === 'whole' || st === 'older')
+    }
+    if (busy) return
+    var todo = left(), bytes = todo.reduce(function (n, s) { return n + SIZES[s] }, 0)
+    if (!todo.length) return show(ru ? '✅ Все игры доступны офлайн' : '✅ All games are available offline', '', true)
+    if (failed) return show(ru ? '⚠️ Скачалось не всё — нет сети? Нажмите ещё раз' : '⚠️ Not everything downloaded — offline? Tap to retry', mb(bytes))
+    show(ru ? '📥 Скачать все игры для офлайна' : '📥 Download all games for offline', mb(bytes))
+  }
+
+  /** One request to the worker; parts (progress) go to onPart. Gives up after 30 s of silence. */
+  function ask(msg, onPart) {
+    return navigator.serviceWorker.ready.then(function (reg) {
+      return new Promise(function (resolve, reject) {
+        var ch = new MessageChannel(), timer
+        function arm() { clearTimeout(timer); timer = setTimeout(function () { reject(new Error('timeout')) }, 30000) }
+        ch.port1.onmessage = function (e) {
+          var d = e.data || {}
+          arm()
+          if (d.error) { clearTimeout(timer); reject(new Error(d.error)) }
+          else if (d.done) { clearTimeout(timer); resolve(d) }
+          else if (onPart) onPart(d)
+        }
+        arm()
+        reg.active.postMessage(msg, [ch.port2])
+      })
+    })
+  }
+  function refresh() {
+    return ask({ type: 'status' }).then(function (d) { state = d.games || {}; render(); return state }, function () {})
+  }
+  function warm(list, onBytes) {
+    return list.reduce(function (p, slug) {
+      return p.then(function () {
+        return ask({ type: 'warm', slug: slug }, function (d) { if (d.bytes) onBytes(d.bytes) })
+          .then(function () { state[slug] = 'whole'; render() })
+      })
+    }, Promise.resolve())
+  }
+
+  btn.addEventListener('click', function () {
+    if (busy) return
+    var todo = left(), total = todo.reduce(function (n, s) { return n + SIZES[s] }, 0), got = 0
+    if (!todo.length) return
+    busy = true; failed = false
+    try { navigator.storage && navigator.storage.persist && navigator.storage.persist().catch(function () {}) } catch (e) {}
+    bar.hidden = false; fill.style.width = '0%'
+    var progress = function () {
+      fill.style.width = Math.min(100, (got / total) * 100).toFixed(1) + '%'
+      show(ru ? 'Скачиваю…' : 'Downloading…', mb(got) + (ru ? ' из ' : ' of ') + mb(total))
+    }
+    progress()
+    warm(todo, function (n) { got += n; progress() })
+      .catch(function () { failed = true })
+      .then(function () { busy = false; bar.hidden = true; return refresh() })
+  })
+
+  render()
+  refresh().then(function (st) {
+    // a kept game whose build changed since: fetch the new build while there is a network
+    var stale = st ? slugs.filter(function (s) { return st[s] === 'older' }) : []
+    if (stale.length && navigator.onLine) warm(stale, function () {}).catch(function () {})
+  })
+  // back from a game's tab: it may be kept now
+  document.addEventListener('visibilitychange', function () { if (!document.hidden && !busy) refresh() })
+})()
+</script>
 </body>
 </html>
